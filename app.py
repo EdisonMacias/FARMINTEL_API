@@ -30,6 +30,10 @@ def preprocess_image(image):
     image = image / 255.0  # Normalizar valores entre 0 y 1
     return image
 
+@app.route('/')
+def home():
+    return "¡Aplicación Flask funcionando!"
+
 # Ruta para realizar predicción y, opcionalmente, almacenar imágenes clasificadas
 @app.route('/predict', methods=['POST'])
 def predict():
